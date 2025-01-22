@@ -1,23 +1,6 @@
-/*
- * Project      Hemodialysis Machine - slave node
- * @file        can_drivers.c
- * 
- * @brief
- * Source file
- * 
- * @details
- * Include the module details here
- * 
- * @date        19 sep 2023
- * @version     3.0.0
- * @author      Luis Juarez
- * @copyright   CIDESI� 2023
- * 
-*/
 
 #include <stdbool.h>
 #include <stdint.h>
-#include "canopen_tm4c.h"
 #include "driverlib/can.h"
 #include "driverlib/gpio.h"
 #include "driverlib/interrupt.h"
@@ -30,8 +13,8 @@
 #include "inc/hw_ints.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
-#include "libs/co_app_tm4c.h"
-#include "libs/co_variables.h"
+#include "CO_app_TM4C123.h"
+#include "CO_variables_TM4C123.h"
 
 #include "driverlib/timer.h"
 #include "tm4c_utils/timers.h"

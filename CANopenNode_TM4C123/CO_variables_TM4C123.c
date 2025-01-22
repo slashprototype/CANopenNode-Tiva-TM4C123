@@ -17,7 +17,7 @@
 
 #include <stdint.h>
 #include <stdbool.h>
-#include "libs/co_variables.h"
+#include "CO_variables_TM4C123.h"
 #include "301/CO_ODinterface.h"
 #include "OD.h"
 
@@ -64,7 +64,6 @@ co_var_error_t co_variableWrite( co_variable_t *variable, uint32_t value )
 	OD_size_t bytes_to_write;
 	OD_size_t bytes_written; 
 	uint8_t subindex = 0;
-	uint8_t *flags;
 
 	if( NULL == variable )
 	{
@@ -82,9 +81,7 @@ co_var_error_t co_variableWrite( co_variable_t *variable, uint32_t value )
 	if( variable->is_event_trigger )
 	{
 	    subindex = variable->od_io.stream.subIndex;
-
-		flags = OD_getFlagsPDO( variable->od_entry );
-		OD_requestTPDO( flags, subindex );
+		OD_requestTPDO( variable->od_entry, subindex );
 	}
 
 	return NO_CO_VAR_ERROR;

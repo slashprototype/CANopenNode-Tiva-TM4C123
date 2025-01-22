@@ -9,7 +9,6 @@
 #include <stdint.h>
 #include <tm4c_utils/pins.h>
 #include <tm4c_utils/timers.h>
-#include "canopen_tm4c.h"
 #include "driverlib/interrupt.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/timer.h"
@@ -42,7 +41,8 @@ static void configureFrequency(timer_module_t* timer, uint32_t frequency_hz) {
     // Calculate the period based on required frequency (hz)
     if (timer->frequency_hz != frequency_hz) {
         timer->frequency_hz = frequency_hz;
-        uint32_t calculated_period = (sys_clock / timer->frequency_hz);
+        uint32_t sys_clock_value = SysCtlClockGet();
+        uint32_t calculated_period = (sys_clock_value / timer->frequency_hz);
         if (timer->is_enabled) {
             TimerIntDisable(timer->hw_timer_base, timer->timer_int_mode);
             TimerDisable(timer->hw_timer_base, timer->timer_name);

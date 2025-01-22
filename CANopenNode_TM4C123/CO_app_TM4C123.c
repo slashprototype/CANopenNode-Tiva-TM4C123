@@ -21,7 +21,17 @@
 #include "driverlib/gpio.h"
 #include "driverlib/sysctl.h"
 #include "inc/hw_memmap.h"
-#include "libs/co_app_tm4c.h"
+#include "CO_app_TM4C123.h"
+
+/* default values for CO_CANopenInit() */
+#define NMT_CONTROL                                                                                                    \
+    CO_NMT_STARTUP_TO_OPERATIONAL                                                                                      \
+    | CO_NMT_ERR_ON_ERR_REG | CO_ERR_REG_GENERIC_ERR | CO_ERR_REG_COMMUNICATION
+#define FIRST_HB_TIME        500
+#define SDO_SRV_TIMEOUT_TIME 1000
+#define SDO_CLI_TIMEOUT_TIME 500
+#define SDO_CLI_BLOCK        false
+#define OD_STATUS_BITS       NULL
 
 /* Pointer to CANopen Generic Object used locally */
 CO_t* CO = NULL;

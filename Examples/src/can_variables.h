@@ -1,24 +1,8 @@
-/*
- * Project      CANopen TM4C Library
- * @file        can_variables.h
- * 
- * @brief
- * Example Header file
- * 
- * @details
- * 
- * 
- * @date        19 sep 2023
- * @version     3.0.0
- * @author      Luis Juarez
- * @copyright   CIDESI� 2023
- * 
-*/
-
 #ifndef CANOPEN_TM4C_EXAMPLES_CAN_VARIABLES_H_
 #define CANOPEN_TM4C_EXAMPLES_CAN_VARIABLES_H_
 
 #include "can_variables.h"
+#include "CO_variables_TM4C123.h"
 
 
 

@@ -1,9 +1,9 @@
-
-/* TODO: Select your target to setup canopen_tm4c->can_config setup*/
+#include <stdint.h>
+#include <stdbool.h>
 #include "driverlib/interrupt.h"
 #include "driverlib/sysctl.h"
 #include "driver/can_drivers.h"
-
+#include "can_variables.h"
 
 int main(void)
 {

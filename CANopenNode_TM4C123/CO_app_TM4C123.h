@@ -1,24 +1,10 @@
-/*
- * Project      CANopen TM4C Library
- * @file        co_app_tm4c.h
- * 
- * @brief
- * Header file
- * 
- * @details
- * Include the module details here
- * 
- * @date        19 sep 2023
- * @version     3.0.0
- * @author      Luis Juarez
- * @copyright   CIDESI� 2023
- * 
-*/
+
 #ifndef CO_APP_TM4C_H_
 #define CO_APP_TM4C_H_
 
 /* Let this definition here, is essential to activate master functionalities*/
-#include "co_driver_target.h"
+#include "CO_driver_target.h"
+#include "301/CO_NMT_Heartbeat.h"
 #include "CANopen.h"
 #include "OD.h"
 
@@ -34,8 +20,6 @@
 #define SDO_CLI_BLOCK false
 #define OD_STATUS_BITS NULL
 #define CO_FIFO_ENABLE true
-
-CO_NMT_control_t NMT_CONTROL;
 
 /*
  * User defined structure that contains all the configurations and definitions to use MCU CAN controller

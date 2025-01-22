@@ -1,19 +1,4 @@
-/*
- * Project      CANopen TM4C Library
- * @file        co_driver_target.h
- * 
- * @brief
- * Header file
- * 
- * @details
- * Include the module details here
- * 
- * @date        19 sep 2023
- * @version     3.0.0
- * @author      Luis Juarez
- * @copyright   CIDESI� 2023
- * 
-*/
+
 #ifndef CO_DRIVER_TARGET_H_
 #define CO_DRIVER_TARGET_H_
 

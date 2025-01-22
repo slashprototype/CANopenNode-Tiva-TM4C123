@@ -1,25 +1,8 @@
-/*
- * Project      Hemodialysis Machine - slave node
- * @file        can_drivers.h
- * 
- * @brief
- * Header file
- * 
- * @details
- * Include the module details here
- * 
- * @date        19 sep 2023
- * @version     3.0.0
- * @author      Luis Juarez
- * @copyright   CIDESI� 2023
- * 
-*/
-
 #ifndef CAN_DRIVERS_H_
 #define CAN_DRIVERS_H_
 
 #include "301/CO_driver.h"
-#include "libs/co_app_tm4c.h"
+#include "CO_app_TM4C123.h"
 
 extern volatile uint32_t sys_timer;
 /*Hardware configurations required for CAN module initialization*/
